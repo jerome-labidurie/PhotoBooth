@@ -23,6 +23,18 @@ Install Photobooth service
     sudo systemctl enable photobooth.service
     sudo systemctl start photobooth.service
 
+Install Overlays service (to copy overlays from usb key during startup)
+
+    sudo cp copy-overlays.service /etc/systemd/system/
+    sudo systemctl daemon-reload
+    sudo systemctl enable copy-overlays.service
+
+Link data dir to USB key (when plugged)
+
+    cd /home/pi
+    ln -s /media/pi/DISK_IMG/ Pictures
+    mkdir Pictures/overlays
+
 add to /boot/config.txt
 
     # enable uart for "power" led

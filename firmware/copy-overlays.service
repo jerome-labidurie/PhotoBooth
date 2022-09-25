@@ -1,0 +1,14 @@
+[Unit]
+Description=Copy Overlays
+After=multi-user.target
+Before=photobooth.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/home/pi/photobooth/copy-overlays.sh
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=photobooth.service
