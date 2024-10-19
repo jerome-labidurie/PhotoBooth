@@ -26,6 +26,7 @@ def stop_start():
 	except CalledProcessError:
 		# error, service is not running, start it
 		#print("Starting photobooth")
+		check_call(['systemctl', 'restart', 'copy-overlays.service'])
 		check_call(['systemctl', 'start', 'photobooth.service'])
 
 # GPIO.setup(3, GPIO.IN, pull_up_down=GPIO.PUD_UP)
