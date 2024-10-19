@@ -52,5 +52,6 @@ There's some images displayed by the PhotoBooth service. They are overlayed on t
 * 3.png / 2.png / 1.png : countdown before picture shooting
 * Merci.png : displayed after shooting, before showing taken picture
 
-## Todo
-* comment refaire les creds ?
+There's a svg template for creating the overlays
+* modify the layers
+* export each layer to a png (2568x1926)
