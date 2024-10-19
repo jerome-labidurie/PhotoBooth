@@ -35,6 +35,10 @@ Link data dir to USB key (when plugged)
     ln -s /media/pi/DISK_IMG/ Pictures
     mkdir Pictures/overlays
 
+**Warning:** when multiple usb keys are used, the mounting directory (in `/media/pi/`) can change. In this case, the link has to be recreated/updated.
+
+Symptoms are: the application crash while taking the photo (no *Merci* screen) and no pictures are created on the usb key.
+
 add to /boot/config.txt
 
     # enable uart for "power" led
